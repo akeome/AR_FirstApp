@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="AR_FirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xwi-Ai-VUb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uv8-Ih-kOc">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4I-wu-IeJ">
+                                <rect key="frame" x="41.5" y="790" width="331" height="72"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="ecT-Qe-UDA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t33-KC-Zge"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wxz-rI-Q2L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d4I-wu-IeJ" firstAttribute="bottom" secondItem="Wxz-rI-Q2L" secondAttribute="bottom" id="4cL-CE-eTd"/>
+                            <constraint firstItem="uv8-Ih-kOc" firstAttribute="width" secondItem="xwi-Ai-VUb" secondAttribute="width" id="AXu-MB-BIW"/>
+                            <constraint firstItem="d4I-wu-IeJ" firstAttribute="centerX" secondItem="uv8-Ih-kOc" secondAttribute="centerX" id="OSE-3o-k6G"/>
+                            <constraint firstItem="d4I-wu-IeJ" firstAttribute="width" secondItem="uv8-Ih-kOc" secondAttribute="width" multiplier="0.8" id="QyR-KQ-9cc"/>
+                            <constraint firstItem="uv8-Ih-kOc" firstAttribute="height" secondItem="xwi-Ai-VUb" secondAttribute="height" id="iey-5V-qMh"/>
+                            <constraint firstItem="uv8-Ih-kOc" firstAttribute="centerY" secondItem="Wxz-rI-Q2L" secondAttribute="centerY" id="t3K-9U-DOY"/>
+                            <constraint firstItem="uv8-Ih-kOc" firstAttribute="centerX" secondItem="Wxz-rI-Q2L" secondAttribute="centerX" id="yNq-5P-FtY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="uv8-Ih-kOc" id="UsS-zW-SP1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
